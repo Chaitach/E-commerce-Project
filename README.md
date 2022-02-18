@@ -1,1 +1,3 @@
-# E-commerce-Project
+# Project Name:
+  E-Commerce Project
+
