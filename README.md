@@ -3,7 +3,7 @@
 # Team Member:
   Chaitach Vadhanachai 5915132
   Phubodee Kongcharoensukying 6017637
-# Project Description
+# Project Description:
 
 # Tech Stack:
   MERN Stack
