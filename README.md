@@ -2,12 +2,15 @@
   E-Commerce Project
 # Team Member:
   Chaitach Vadhanachai 5915132
+  
   Phubodee Kongcharoensukying 6017637
 # Project Description:
 **Introduction**
+
 Our group have come up with this project idea base on the content in the web design class. Some functional that we have taught could be useful for our project. We could modify those function to be used in real life application. 
 
 **Summary**
+
 The system will work as a shopping gateway between the admin and customer. The function of the system would let customer easily buy their product online and allow admin to manage the products. 
 
 **Functional**
@@ -35,5 +38,4 @@ Admin
 -	Orders
 
 # Tech Stack:
-  MERN Stack
   ![image](https://www.mindinventory.com/blog/wp-content/uploads/2021/06/mern-stack.png)
