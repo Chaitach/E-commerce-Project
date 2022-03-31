@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Products from './products/Products'
 import DetailProduct from './detailProduct/DetailProduct'
 import Login from './auth/Login'
@@ -21,25 +21,25 @@ function Pages() {
 
 
     return (
-        <Switch>
-            <Route path="/" exact component={Products} />
-            <Route path="/detail/:id" exact component={DetailProduct} />
+        <Routes>
+            <Route path="/" element={Products} />
+            <Route path="/detail/:id" element={DetailProduct} />
 
-            <Route path="/login" exact component={isLogged ? NotFound : Login} />
-            <Route path="/register" exact component={isLogged ? NotFound : Register} />
+            <Route path="/login" element={isLogged ? NotFound : Login} />
+            <Route path="/register" element={isLogged ? NotFound : Register} />
 
-            <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
-            <Route path="/create_product" exact component={isAdmin ? CreateProduct : NotFound} />
-            <Route path="/edit_product/:id" exact component={isAdmin ? CreateProduct : NotFound} />
+            <Route path="/category" element={isAdmin ? Categories : NotFound} />
+            <Route path="/create_product" element={isAdmin ? CreateProduct : NotFound} />
+            <Route path="/edit_product/:id" element={isAdmin ? CreateProduct : NotFound} />
 
-            <Route path="/history" exact component={isLogged ? OrderHistory : NotFound} />
-            <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
+            <Route path="/history" element={isLogged ? OrderHistory : NotFound} />
+            <Route path="/history/:id" element={isLogged ? OrderDetails : NotFound} />
 
-            <Route path="/cart" exact component={Cart} />
+            <Route path="/cart" element={Cart} />
 
 
-            <Route path="*" exact component={NotFound} />
-        </Switch>
+            <Route path="*" element={NotFound} />
+        </Routes>
     )
 }
 

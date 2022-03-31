@@ -1,14 +1,12 @@
 const Products = require('../models/productModel')
 
-// Filter, sorting and paginating
-
 class APIfeatures {
     constructor(query, queryString){
         this.query = query;
         this.queryString = queryString;
     }
     filtering(){
-       const queryObj = {...this.queryString} //queryString = req.query
+       const queryObj = {...this.queryString} 
 
        const excludedFields = ['page', 'sort', 'limit']
        excludedFields.forEach(el => delete(queryObj[el]))
@@ -16,10 +14,6 @@ class APIfeatures {
        let queryStr = JSON.stringify(queryObj)
        queryStr = queryStr.replace(/\b(gte|gt|lt|lte|regex)\b/g, match => '$' + match)
 
-    //    gte = greater than or equal
-    //    lte = lesser than or equal
-    //    lt = lesser than
-    //    gt = greater than
        this.query.find(JSON.parse(queryStr))
          
        return this;
